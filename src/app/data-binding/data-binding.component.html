@@ -1,0 +1,52 @@
+<section>
+    <article>
+        <h3>Interpolation</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Expressão 1 + 1: {{ 1 + 1 }}</p>
+        <p>Expressão 1 + 1 não é : {{ 1 + 1 + getValor() }}</p>
+    </article>
+    <article>
+        <h3>Property binding</h3>
+        <img src="{{ urlImagem }}" />
+        <img [src]="urlImagem" />
+        <img bind-src="urlImagem" />
+    </article>
+    <article>
+        <h3>Class e Style Binding</h3>
+        Selecione uma classe:
+        <select #classeSelecionada (change)="0">
+            <option value="alert-success">Sucesso</option>
+            <option value="alert-danger">Perigo</option>
+            <option value="alert-warning">atenção</option>
+            <option value="alert-info">Informação</option>
+        </select>
+        <br/>
+        <br/>
+        <div class="alert" role="alert" 
+            [class.alert-success]="classeSelecionada.value == 'alert-success'">
+            A simple success alert—check it out!
+        </div>
+        <div class="alert" role="alert"
+            [class.alert-danger]="classeSelecionada.value == 'alert-danger'">
+            A simple danger alert—check it out!
+        </div>
+        <div class="alert" role="alert"
+            [class.alert-warning]="classeSelecionada.value == 'alert-warning'">
+            A simple warning alert—check it out!
+        </div>
+        <div class="alert" role="alert"
+            [class.alert-info]="classeSelecionada.value == 'alert-info'">
+            A simple info alert—check it out!
+        </div>
+        <br/>
+        <div class="alert {{ classeSelecionada.value }}" role="alert">
+            Cor muda conforme select
+        </div>
+        <br/>
+        <div class="alert alert-danger" role="alert"
+            [style.display]="classeSelecionada.value == 'alert-danger' ? 'block' : 'none'">
+            Aqui aparece só em caso de erro
+        </div>
+
+    </article>
+</section>
