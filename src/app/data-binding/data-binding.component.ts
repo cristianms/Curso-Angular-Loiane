@@ -8,12 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
 
   url: string = 'http://www.google.com'
+  urlImagem = 'http://lorempixel.com/200/100'
+  valorDoCampo: string = ''
+  valorSalvo: string = ''
+  isMouseOver: boolean = false
 
   getValor() {
     return 1
   }
-
-  urlImagem = 'http://lorempixel.com/200/100'
+  botaoClicado() {
+    alert('Teste botaoClicado')
+  }
+  onKeyUp(evento: KeyboardEvent) {
+    this.valorDoCampo = (<HTMLInputElement>evento.target).value
+  }
+  salvarValor(valor: string) {
+    this.valorSalvo = valor;
+  }
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver
+  }
 
   constructor() { }
 
