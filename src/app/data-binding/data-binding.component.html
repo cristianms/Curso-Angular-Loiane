@@ -94,6 +94,10 @@
 <section>
     <article>
         <h3>Input output Properties</h3>
-        <app-curso [nome]="nomeCurso"></app-curso>
+        <app-curso  [nome]="nomeCurso"></app-curso>
+        
+        <contador   valor="13"
+                    (mudouValor)="onMudouValor($event)"></contador>
+
     </article>
 </section>
