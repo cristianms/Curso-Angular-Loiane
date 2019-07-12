@@ -1,32 +1,29 @@
-<article>
-        <h3>Two Way Data Binding</h3>
-        <div>
-            <input type="text"
-                [value]="nome"
-                (input)="nome = $event.target.value"
-                /><br/>
-            <input type="text"
-                [ngModel]="nome"
-                (ngModelChange)="nome = $event.target.value"
-                /><br/>
+<div>
+    <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value"
+        /><br/>
+    <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event.target.value"
+        /><br/>
 
-            <!-- two way data binding -->
-            <input type="text" 
-                [(ngModel)]="nome"
-                />
-                
-                <p>Você digitou "{{ nome }}"</p>
-        </div>
-        <div>
-            <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
-            Nome obj
-            <input type="text" 
-                [(ngModel)]="pessoa.nome"
-                />
-            <br/>
-            Idade obj:
-            <input type="text" 
-                [(ngModel)]="pessoa.idade"
-                />
-        </div>
-    </article>
+    <!-- two way data binding -->
+    <input type="text" 
+        [(ngModel)]="nome"
+        />
+        
+        <p>Você digitou "{{ nome }}"</p>
+</div>
+<div>
+    <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
+    Nome obj
+    <input type="text" 
+        [(ngModel)]="pessoa.nome"
+        />
+    <br/>
+    Idade obj:
+    <input type="text" 
+        [(ngModel)]="pessoa.idade"
+        />
+</div>

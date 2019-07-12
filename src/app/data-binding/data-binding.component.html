@@ -1,16 +1,20 @@
-<section>
+<!-- <section>
     <article>
         <h3>Interpolation</h3>
         <p>String renderizada com interpolação: {{ url }}</p>
         <p>Expressão 1 + 1: {{ 1 + 1 }}</p>
         <p>Expressão 1 + 1 não é : {{ 1 + 1 + getValor() }}</p>
     </article>
+</section>
+<section>
     <article>
         <h3>Property binding</h3>
         <img src="{{ urlImagem }}" />
         <img [src]="urlImagem" />
         <img bind-src="urlImagem" />
     </article>
+</section>
+<section>
     <article>
         <h3>Class e Style Binding</h3>
         Selecione uma classe:
@@ -48,6 +52,8 @@
         Aqui aparece só em caso de erro
         </div>
     </article>
+</section>
+<section>
     <article>
         <h3>Event Binding</h3>
         <div>
@@ -76,7 +82,18 @@
             </span>
         </div>
     </article>
+</section>
 
-    <app-meu-form></app-meu-form>
+<section>
+    <article>
+        <h3>Two Way Data Binding</h3>
+        <app-meu-form></app-meu-form>
+    </article>
+</section> -->
 
+<section>
+    <article>
+        <h3>Input output Properties</h3>
+        <app-curso [nome]="nomeCurso"></app-curso>
+    </article>
 </section>
