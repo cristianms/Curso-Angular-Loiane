@@ -1,0 +1,13 @@
+.fora {
+  text-align: left;
+  font-weight: bold;
+}
+.dentro{
+  text-align: left;
+  color: darkgray;
+}
+.nenhum{
+  text-align: left;
+  text-transform: revert;
+  color: red;
+}
